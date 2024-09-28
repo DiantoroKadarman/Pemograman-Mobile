@@ -11,5 +11,16 @@ Terjadi error karena tipe data var list adalah defaultnya null. Solusinya adalah
 
 ## Praktikum 2
 ## Langkah 2
+Ketika di run, isi dari variable halogens di print sesuai isinya yaitu ```{'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'}```
+
+## Langkah 3
+Tidak terjadi error ketika di run, hanya saja variable variable tersebut berisi null
+![alt text](image.png)
+
+Menambahkan elemen nama dan NIM menggunakan ```.add()``` dan ```.addAll()```
+![alt text](image-1.png)
+
+Hasil
+![alt text](image-2.png)
 
 
