@@ -24,5 +24,8 @@ Hasil
 ![alt text](image-2.png)
 
 
+## Praktikum 3
+#### Langkah 2
+tidak terjadi error, variable gifts berisi pasangan kunci (key) berupa string dengan nilai (value) berupa string dan angka, sedangkan nobleGases berisi pasangan kunci berupa angka dengan nilai berupa string dan angka. Kemudian kedua variable diatas di print
 
-
+#### Langkah 3
