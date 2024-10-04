@@ -121,19 +121,120 @@ Mengganti isi record dengan nama dan NIM
 
 # Tugas Praktikum 
 ### 1. Jelaskan yang dimaksud Functions dalam bahasa Dart!
-Jawab :
+Jawab : Fungsi (Functions) dalam bahasa Dart adalah blok kode yang dapat dieksekusi dan memiliki tujuan tertentu. Fungsi memungkinkan kita untuk menulis potongan kode yang dapat digunakan kembali di berbagai tempat dalam aplikasi. Fungsi bisa menerima parameter sebagai input dan mengembalikan nilai sebagai output.
 
 ### 2. Jelaskan jenis-jenis parameter di Functions beserta contoh sintaksnya!
-Jawab :
+Jawab : Ada tiga jenis parameter dalam fungsi Dart
+
+1. Positional Parameters (Parameter Posisi): Parameter ini adalah yang wajib diisi dalam urutan yang sudah ditentukan
+
+    ```sh
+    void cetakPesan(String pesan, int jumlah) {
+        for (var i = 0; i < jumlah; i++) {
+        print(pesan);
+        }
+    }
+    cetakPesan('Halo', 3); // Output: Halo, Halo, Halo
+    ```
+2. Optional Positional Parameters: Parameter ini bersifat opsional dan ditempatkan di dalam kurung siku []. Jika tidak diberikan nilai, parameter ini bernilai null secara default.
+
+    ```sh
+    void cetakPesan(String pesan, [int? jumlah] ) {
+        jumlah ??= 1; // Default 1 jika tidak diisi
+        for (var i = 0; i < jumlah; i++) {
+            print(pesan);
+        }
+    }
+
+    cetakPesan('Halo'); // Output: Halo
+    cetakPesan('Halo', 3); // Output: Halo, Halo, Halo
+    ```
+
+3. Named Parameters (Parameter Bernama): Parameter ini diberi nama dan diletakkan di dalam kurung kurawal {}. Named parameters bisa bersifat opsional dan memberikan nilai default.
+    ```sh
+    void cetakPesan({required String pesan, int jumlah = 1}) {
+        for (var i = 0; i < jumlah; i++) {
+            print(pesan);
+        }
+    }
+
+    cetakPesan(pesan: 'Halo', jumlah: 3); // Output: Halo, Halo, Halo
+    cetakPesan(pesan: 'Halo'); // Output: Halo
+    ```
+
 
 ### 3. Jelaskan maksud Functions sebagai first-class objects beserta contoh sintaknya!
-Jawab :
+Jawab : Fungsi sebagai first-class objects berarti fungsi dalam Dart dapat diperlakukan seperti objek lainnya. Fungsi dapat disimpan dalam variabel, diteruskan sebagai parameter ke fungsi lain, atau dikembalikan dari fungsi lain. Hal ini memungkinkan penggunaan fungsi yang lebih fleksibel.
+
+```sh
+void cetakAngka(int angka) {
+    print(angka);
+}
+
+void main() {
+  // Menyimpan fungsi ke dalam variabel
+  var fungsiCetak = cetakAngka;
+  
+  // Memanggil fungsi dari variabel
+  fungsiCetak(5); // Output: 5
+}
+```
 
 ### 4. Apa itu Anonymous Functions? Jelaskan dan berikan contohnya!
-Jawab :
+Jawab : Anonymous Functions (Fungsi Tanpa Nama) adalah fungsi yang tidak memiliki nama dan biasanya digunakan di tempat di mana fungsi sementara diperlukan, misalnya dalam argumen atau sebagai callback. Anonymous functions sering digunakan untuk operasi sederhana dan cepat.
+
+Contoh
+```sh
+void main() {
+  var angka = [1, 2, 3, 4];
+  
+  // Menggunakan anonymous function sebagai parameter
+  angka.forEach((int n) {
+    print(n);
+  });
+}
+```
+
 
 ### 5. Jelaskan perbedaan Lexical scope dan Lexical closures! Berikan contohnya!
-Jawab :
+Jawab : 
+ - Lexical Scope adalah konsep di mana variabel dalam suatu fungsi atau blok kode hanya bisa diakses dari dalam lingkup atau ruang lingkup (scope) di mana variabel tersebut didefinisikan.
+    ```sh
+    void main() {
+    int a = 10;
+
+    void cetakA() {
+        print(a); // Variabel a dapat diakses di dalam fungsi ini karena berada di dalam lingkup yang sama
+    }
+
+    cetakA(); // Output: 10
+    }
+    ```
+ - Lexical Closure terjadi ketika sebuah fungsi "mengingat" lingkup atau konteks di mana fungsi tersebut didefinisikan, meskipun fungsi tersebut dieksekusi di luar lingkup tersebut. Closure dapat "menangkap" variabel dari lingkungan sekitarnya.
+     ```sh
+    Function penambah(int jumlah) {
+        return (int angka) => angka + jumlah;
+    }
+
+    void main() {
+        var tambahDua = penambah(2); // jumlah di-capture
+        print(tambahDua(3)); // Output: 5
+    }
+    ```
 
 ### 6. Jelaskan dengan contoh cara membuat return multiple value di Functions!
-Jawab :
+Jawab : Untuk mengembalikan beberapa nilai dari sebuah fungsi di Dart, salah satu caranya adalah dengan menggunakan Record Types atau List/Tuple. Record Types memungkinkan kita untuk mengembalikan beberapa nilai tanpa harus membuat kelas.
+
+```sh
+(String, int) getMahasiswa() {
+    String nama = "John Doe";
+    int nim = 123456;
+    return (nama, nim);
+}
+
+void main() {
+    var (nama, nim) = getMahasiswa();
+    print("Nama: $nama, NIM: $nim"); // Output: Nama: John Doe, NIM: 123456
+}
+```
+Fungsi `getMahasiswa` mengembalikan dua nilai sekaligus: nama dan nim. Record digunakan untuk mengembalikan banyak nilai tanpa membuat class atau list.
