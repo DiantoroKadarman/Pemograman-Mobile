@@ -128,7 +128,7 @@ Jawab : Ada tiga jenis parameter dalam fungsi Dart
 
 1. Positional Parameters (Parameter Posisi): Parameter ini adalah yang wajib diisi dalam urutan yang sudah ditentukan
 
-    ```sh
+    ```dart
     void cetakPesan(String pesan, int jumlah) {
         for (var i = 0; i < jumlah; i++) {
         print(pesan);
@@ -138,7 +138,7 @@ Jawab : Ada tiga jenis parameter dalam fungsi Dart
     ```
 2. Optional Positional Parameters: Parameter ini bersifat opsional dan ditempatkan di dalam kurung siku []. Jika tidak diberikan nilai, parameter ini bernilai null secara default.
 
-    ```sh
+    ```dart
     void cetakPesan(String pesan, [int? jumlah] ) {
         jumlah ??= 1; // Default 1 jika tidak diisi
         for (var i = 0; i < jumlah; i++) {
@@ -151,7 +151,7 @@ Jawab : Ada tiga jenis parameter dalam fungsi Dart
     ```
 
 3. Named Parameters (Parameter Bernama): Parameter ini diberi nama dan diletakkan di dalam kurung kurawal {}. Named parameters bisa bersifat opsional dan memberikan nilai default.
-    ```sh
+    ```dart
     void cetakPesan({required String pesan, int jumlah = 1}) {
         for (var i = 0; i < jumlah; i++) {
             print(pesan);
@@ -166,7 +166,7 @@ Jawab : Ada tiga jenis parameter dalam fungsi Dart
 ### 3. Jelaskan maksud Functions sebagai first-class objects beserta contoh sintaknya!
 Jawab : Fungsi sebagai first-class objects berarti fungsi dalam Dart dapat diperlakukan seperti objek lainnya. Fungsi dapat disimpan dalam variabel, diteruskan sebagai parameter ke fungsi lain, atau dikembalikan dari fungsi lain. Hal ini memungkinkan penggunaan fungsi yang lebih fleksibel.
 
-```sh
+```dart
 void cetakAngka(int angka) {
     print(angka);
 }
@@ -184,7 +184,7 @@ void main() {
 Jawab : Anonymous Functions (Fungsi Tanpa Nama) adalah fungsi yang tidak memiliki nama dan biasanya digunakan di tempat di mana fungsi sementara diperlukan, misalnya dalam argumen atau sebagai callback. Anonymous functions sering digunakan untuk operasi sederhana dan cepat.
 
 Contoh
-```sh
+```dart
 void main() {
   var angka = [1, 2, 3, 4];
   
@@ -199,7 +199,7 @@ void main() {
 ### 5. Jelaskan perbedaan Lexical scope dan Lexical closures! Berikan contohnya!
 Jawab : 
  - Lexical Scope adalah konsep di mana variabel dalam suatu fungsi atau blok kode hanya bisa diakses dari dalam lingkup atau ruang lingkup (scope) di mana variabel tersebut didefinisikan.
-    ```sh
+    ```dart
     void main() {
     int a = 10;
 
@@ -211,7 +211,7 @@ Jawab :
     }
     ```
  - Lexical Closure terjadi ketika sebuah fungsi "mengingat" lingkup atau konteks di mana fungsi tersebut didefinisikan, meskipun fungsi tersebut dieksekusi di luar lingkup tersebut. Closure dapat "menangkap" variabel dari lingkungan sekitarnya.
-     ```sh
+     ```dart
     Function penambah(int jumlah) {
         return (int angka) => angka + jumlah;
     }
@@ -225,7 +225,7 @@ Jawab :
 ### 6. Jelaskan dengan contoh cara membuat return multiple value di Functions!
 Jawab : Untuk mengembalikan beberapa nilai dari sebuah fungsi di Dart, salah satu caranya adalah dengan menggunakan Record Types atau List/Tuple. Record Types memungkinkan kita untuk mengembalikan beberapa nilai tanpa harus membuat kelas.
 
-```sh
+```dart
 (String, int) getMahasiswa() {
     String nama = "John Doe";
     int nim = 123456;
