@@ -16,7 +16,7 @@ void main(List<String> args) {
 
   print(combinedList);
 
-  bool promoActive = false;
+  bool promoActive = true;
   var nav = ['Home', 'Furniture', 'Plants', if (promoActive) 'Outlet'];
   print(nav);
 
