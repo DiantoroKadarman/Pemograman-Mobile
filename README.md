@@ -1,5 +1,6 @@
 # Laporan Pemograman Mobile
 Nama : Diantoro Kadarman
+
 NIM  : 2241720084
 ## Praktikum 1
 ### Langkah 2
@@ -15,13 +16,13 @@ Ketika di run, isi dari variable halogens di print sesuai isinya yaitu ```{'fluo
 
 ### Langkah 3
 Tidak terjadi error ketika di run, hanya saja variable variable tersebut berisi null
-![alt text](img/image.png)
+![alt text](image.png)
 
 Menambahkan elemen nama dan NIM menggunakan ```.add()``` dan ```.addAll()```
-![alt text](img/image-1.pngimage-1.png)
+![alt text](image-1.png)
 
 Hasil
-![alt text](img/image-2.png)
+![alt text](image-2.png)
 
 
 ## Praktikum 3
@@ -32,7 +33,7 @@ Tidak terjadi error, variable gifts berisi pasangan kunci (key) berupa string de
 Tidak terjadi error, namun variabel mhs 1 dan 2 tidak digunakan sama sekali
 
 #### Menambahkan elemen nama dan NIM
-![alt text](img/image-3.png)
+![alt text](image-3.png)
 
 hasil
 ![alt text](image-4.png)
