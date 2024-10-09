@@ -28,5 +28,6 @@ A new Flutter project.
 ### Langkah 4: Dialog Widget
 ![alt text](<images/vid dialog widget.gif>)
 ### Langkah 5: Input dan Selection Widget
-
+![alt text](<images/vid Input dan Selection Widget.gif>)
 ### Langkah 6: Date and Time Pickers
+![alt text](<images/vid Date Picker.gif>)
