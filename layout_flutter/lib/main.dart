@@ -5,7 +5,24 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
-  final Widget titleSection = Container(
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Diantoro Kadarman / 2241720084',
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Flutter layout demo'),
+        ),
+        body: Column(
+          children: [
+            titleSection,
+          ],
+        ),
+      ),
+    );
+  }
+
+final Widget titleSection = Container(
     padding: const EdgeInsets.all(32),
     child: Row(
       children: [
@@ -44,20 +61,4 @@ class MyApp extends StatelessWidget {
     ),
   );
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Diantoro Kadarman / 2241720084',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Flutter layout demo'),
-        ),
-        body: Column(
-          children: [
-            titleSection,
-          ],
-        ),
-      ),
-    );
-  }
 }
