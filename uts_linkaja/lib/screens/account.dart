@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class AccountPage extends StatelessWidget {
@@ -18,7 +17,8 @@ class AccountPage extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.all(16.0),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween, // Mengatur posisi elemen dengan ruang di antara
+                mainAxisAlignment: MainAxisAlignment
+                    .spaceBetween, // Mengatur posisi elemen dengan ruang di antara
                 children: [
                   // Detail pengguna di sebelah kiri
                   Expanded(
@@ -34,7 +34,7 @@ class AccountPage extends StatelessWidget {
                         ),
                         SizedBox(height: 4),
                         Text(
-                          '+6285755730905',
+                          '+6285711315783',
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 14,
@@ -46,7 +46,8 @@ class AccountPage extends StatelessWidget {
                   // Gambar profil di sebelah kanan
                   CircleAvatar(
                     radius: 40,
-                    backgroundImage: AssetImage('images/profil.jpg'), // Ganti dengan path gambar profil
+                    backgroundImage: AssetImage(
+                        'assets/profile.jpg'), // Ganti dengan path gambar profil
                   ),
                 ],
               ),
@@ -58,7 +59,8 @@ class AccountPage extends StatelessWidget {
             _buildAccountOption(context, 'Account Settings'),
             _buildAccountOption(context, 'LinkAja Syariah', 'Not Active'),
             _buildAccountOption(context, 'Payment Method'),
-            _buildAccountOption(context, 'Email', 'sofyan.89@gmail.com'),
+            _buildAccountOption(
+                context, 'Email', 'diantorokadarman03@gmail.com'),
             _buildAccountOption(context, 'Security Question', 'Set'),
             _buildAccountOption(context, 'PIN Settings'),
             _buildAccountOption(context, 'Language', 'English'),
@@ -72,16 +74,19 @@ class AccountPage extends StatelessWidget {
   }
 
   // Method untuk membangun setiap opsi pengaturan dalam Container
-  Widget _buildAccountOption(BuildContext context, String title, [String? subtitle]) {
+  Widget _buildAccountOption(BuildContext context, String title,
+      [String? subtitle]) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 4, horizontal: 16), // Margin untuk pemisahan antar opsi
+      margin: const EdgeInsets.symmetric(
+          vertical: 4, horizontal: 16), // Margin untuk pemisahan antar opsi
       padding: const EdgeInsets.all(16), // Padding di dalam Container
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.2), // Bayangan lembut untuk efek kedalaman
+            color: Colors.grey
+                .withOpacity(0.2), // Bayangan lembut untuk efek kedalaman
             spreadRadius: 1,
             blurRadius: 5,
             offset: const Offset(0, 3), // Mengatur posisi bayangan
@@ -89,7 +94,8 @@ class AccountPage extends StatelessWidget {
         ],
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween, // Mengatur posisi elemen
+        mainAxisAlignment:
+            MainAxisAlignment.spaceBetween, // Mengatur posisi elemen
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,

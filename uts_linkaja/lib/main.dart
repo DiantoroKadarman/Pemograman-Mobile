@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const SplashScreen(), // SplashScreen
+      home: const SplashScreen(), // Splash Screen
     );
   }
 }
@@ -33,11 +33,11 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
-    const HomePage(), // Home Page yang ada di folder screens/homepage.dart
-    const HistoryPage(), // History Page yang ada di folder screens/history.dart
-    const Center(child: Text('Pay Page')), // Placeholder untuk halaman Pay
-    const Center(child: Text('Inbox Page')), // Placeholder untuk halaman Inbox
-    const AccountPage(), // Account Page yang ada di folder screens/account.dart
+    const HomePage(), // Home Page located in screens/homepage.dart
+    const HistoryPage(), // History Page located in screens/history.dart
+    const Center(child: Text('Pay Page')), // Placeholder for the Pay page
+    const Center(child: Text('Inbox Page')), // Placeholder for the Inbox page
+    const AccountPage(), // Account Page located in screens/account.dart
   ];
 
   @override
@@ -49,27 +49,25 @@ class _MainScreenState extends State<MainScreen> {
           children: _pages,
         ),
         bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType
-              .fixed, // Tambahkan ini untuk menghilangkan efek scaling
+          type: BottomNavigationBarType.fixed, // Removes scaling effect
           currentIndex: _currentIndex,
           onTap: (index) {
             setState(() {
               _currentIndex = index;
             });
           },
-          backgroundColor: Colors.white, // Warna latar belakang hitam
-          selectedItemColor:
-              Colors.black, // Warna item yang dipilih menjadi hitam
-          unselectedItemColor: Colors.grey, // Warna item yang tidak dipilih
+          backgroundColor: Colors.white, // Background color
+          selectedItemColor: Colors.black, // Color for selected item
+          unselectedItemColor: Colors.grey, // Color for unselected item
           items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Beranda'),
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.history), label: 'History'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.qr_code_scanner_outlined), label: 'Bayar'),
+                icon: Icon(Icons.qr_code_scanner_outlined), label: 'Pay'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.message_rounded), label: 'Kotak Masuk'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Akun'),
+                icon: Icon(Icons.message_rounded), label: 'Inbox'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Account'),
           ],
         ),
       ),

@@ -34,15 +34,6 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 80,
             ),
             const SizedBox(height: 20),
-            // Text(
-            //   'YOIII MANGGGGG',
-            //   style: TextStyle(
-            //     fontSize: 24,
-            //     fontWeight: FontWeight.bold,
-            //     color: Colors.red[900],
-            //   ),
-            // ),
-            const SizedBox(height: 20),
             CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Colors.red[900]!),
             ),
