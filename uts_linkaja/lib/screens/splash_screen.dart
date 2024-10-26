@@ -1,20 +1,53 @@
-// lib/screens/splash_screen.dart
 import 'package:flutter/material.dart';
-import 'package:uts_linkaja/screens/homepage.dart';
+import 'dart:async';
+import '../main.dart'; // Import main.dart untuk navigasi ke MainScreen
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
-  Widget build(BuildContext context) {
-    Future.delayed(Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => HomePage()),
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(const Duration(seconds: 3), () {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+            builder: (_) => const MainScreen()), // Navigasi ke MainScreen
       );
     });
+  }
 
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
-        child: Image.asset('lib/assets/splashscreen_logo.png', width: 150),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/logo.png', // Gambar LinkAja
+              height: 80,
+            ),
+            const SizedBox(height: 20),
+            // Text(
+            //   'YOIII MANGGGGG',
+            //   style: TextStyle(
+            //     fontSize: 24,
+            //     fontWeight: FontWeight.bold,
+            //     color: Colors.red[900],
+            //   ),
+            // ),
+            const SizedBox(height: 20),
+            CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.red[900]!),
+            ),
+          ],
+        ),
       ),
     );
   }

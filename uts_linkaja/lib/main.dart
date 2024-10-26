@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'screens/splash_screen.dart';
+import 'package:uts_linkaja/screens/splash_screen.dart';
+import 'package:uts_linkaja/screens/account.dart';
+import 'package:uts_linkaja/screens/history.dart';
+import 'package:uts_linkaja/screens/homepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,59 +11,68 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Linkaja',
-      theme: ThemeData(primarySwatch: Colors.red),
-      home: SplashScreen(),
+      title: 'Diantoro_2241720084',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+      ),
+      home: const SplashScreen(), // SplashScreen
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  _MainScreenState createState() => _MainScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+class _MainScreenState extends State<MainScreen> {
+  int _currentIndex = 0;
+  final List<Widget> _pages = [
+    const HomePage(), // Home Page yang ada di folder screens/homepage.dart
+    const HistoryPage(), // History Page yang ada di folder screens/history.dart
+    const Center(child: Text('Pay Page')), // Placeholder untuk halaman Pay
+    const Center(child: Text('Inbox Page')), // Placeholder untuk halaman Inbox
+    const AccountPage(), // Account Page yang ada di folder screens/account.dart
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(widget.title),
+    return SafeArea(
+      child: Scaffold(
+        body: IndexedStack(
+          index: _currentIndex,
+          children: _pages,
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const Text(
-                'You have pushed the button this many times:',
-              ),
-              Text(
-                '$_counter',
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
-            ],
-          ),
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType
+              .fixed, // Tambahkan ini untuk menghilangkan efek scaling
+          currentIndex: _currentIndex,
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          backgroundColor: Colors.white, // Warna latar belakang hitam
+          selectedItemColor:
+              Colors.black, // Warna item yang dipilih menjadi hitam
+          unselectedItemColor: Colors.grey, // Warna item yang tidak dipilih
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Beranda'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.history), label: 'History'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.qr_code_scanner_outlined), label: 'Bayar'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.message_rounded), label: 'Kotak Masuk'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Akun'),
+          ],
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: _incrementCounter,
-          tooltip: 'Increment',
-          child: const Icon(Icons.add),
-        ));
+      ),
+    );
   }
 }
