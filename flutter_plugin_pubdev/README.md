@@ -11,7 +11,7 @@ Buatlah sebuah project flutter baru dengan nama flutter_plugin_pubdev. Lalu jadi
 ## **Langkah 2: Menambahkan Plugin**
 Tambahkan plugin auto_size_text menggunakan perintah berikut di terminal
 
-![alt text](image.png)
+![alt text](assets/image.png)
 
 flutter pub add auto_size_text
 Jika berhasil, maka akan tampil nama plugin beserta versinya di file pubspec.yaml pada bagian dependencies.
@@ -19,12 +19,12 @@ Jika berhasil, maka akan tampil nama plugin beserta versinya di file pubspec.yam
 ## **Langkah 3: Buat file red_text_widget.dart**
 Buat file baru bernama red_text_widget.dart di dalam folder lib lalu isi kode seperti berikut.
 
-![alt text](image-1.png)
+![alt text](assets/image-1.png)
 
 ## **Langkah 4: Tambah Widget AutoSizeText**
 Masih di file red_text_widget.dart, untuk menggunakan plugin auto_size_text, ubahlah kode return Container() menjadi seperti berikut.
 
-![alt text](image-2.png)
+![alt text](assets/image-2.png)
 
 Setelah Anda menambahkan kode di atas, Anda akan mendapatkan info error. Mengapa demikian? Jelaskan dalam laporan praktikum Anda!
 
@@ -37,13 +37,13 @@ AutoSizeText belum diimpor. Tambahkan import 'package:auto_size_text/auto_size_t
 ## **Langkah 5: Buat Variabel text dan parameter di constructor**
 Tambahkan variabel text dan parameter di constructor seperti berikut.
 
-![alt text](image-3.png)
+![alt text](assets/image-3.png)
 
 ## **Langkah 6: Tambahkan widget di main.dart**
 Buka file main.dart lalu tambahkan di dalam children: pada class _MyHomePageState
 Run aplikasi tersebut dengan tekan F5, maka hasilnya akan seperti berikut.
 
-![alt text](image-4.png)
+![alt text](assets/image-4.png)
 
 ## **8. Tugas Praktikum**
 **1. Selesaikan Praktikum tersebut, lalu dokumentasikan dan push ke repository Anda berupa screenshot hasil pekerjaan beserta penjelasannya di file README.md!**
