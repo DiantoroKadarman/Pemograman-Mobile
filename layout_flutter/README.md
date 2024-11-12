@@ -48,7 +48,7 @@ Bangun baris yang berisi kolom-kolom ini dengan memanggil fungsi dan set warna, 
 ### **Langkah 3: Tambah button section ke body**
 Tambahkan variabel buttonSection ke dalam body seperti berikut:
 
-![alt text](image.png)
+![alt text](assets/ass/image.png)
 
 ## **5. Praktikum 3: Implementasi text section**
 Selesaikan langkah-langkah praktikum berikut ini dengan melanjutkan dari praktikum sebelumnya.
@@ -56,14 +56,14 @@ Selesaikan langkah-langkah praktikum berikut ini dengan melanjutkan dari praktik
 ### **Langkah 1: Buat widget textSection**
 Tentukan bagian teks sebagai variabel. Masukkan teks ke dalam Container dan tambahkan padding di sepanjang setiap tepinya. Tambahkan kode berikut tepat di bawah deklarasi buttonSection:
 
-![alt text](image-1.png)
+![alt text](assets/ass/image-1.png)
 
 Dengan memberi nilai softWrap = true, baris teks akan memenuhi lebar kolom sebelum membungkusnya pada batas kata.
 
 ### **Langkah 2: Tambahkan variabel text section ke body**
 Tambahkan widget variabel textSection ke dalam body seperti berikut:
 
-![alt text](image-2.png)
+![alt text](assets/ass/image-2.png)
 
 
 ## **6. Praktikum 4: Implementasi image section**
@@ -72,7 +72,7 @@ Selesaikan langkah-langkah praktikum berikut ini dengan melanjutkan dari praktik
 ### **Langkah 1: Siapkan aset gambar**
 Anda dapat mencari gambar di internet yang ingin ditampilkan. Buatlah folder images di root project layout_flutter. Masukkan file gambar tersebut ke folder images, lalu set nama file tersebut ke file pubspec.yaml seperti berikut:
 
-![alt text](image-3.png)
+![alt text](assets/ass/image-3.png)
 
 Contoh nama file gambar di atas adalah lake.jpg
 
@@ -80,16 +80,16 @@ Contoh nama file gambar di atas adalah lake.jpg
 ### **Langkah 2: Tambahkan gambar ke body**
 Tambahkan aset gambar ke dalam body seperti berikut:
 
-![alt text](image-4.png)
+![alt text](assets/ass/image-4.png)
 
 BoxFit.cover memberi tahu kerangka kerja bahwa gambar harus sekecil mungkin tetapi menutupi seluruh kotak rendernya.
 
 ### **Langkah 3: Terakhir, ubah menjadi ListView**
 Pada langkah terakhir ini, atur semua elemen dalam ListView, bukan Column, karena ListView mendukung scroll yang dinamis saat aplikasi dijalankan pada perangkat yang resolusinya lebih kecil.
 
-![alt text](image-5.png)
+![alt text](assets/ass/image-5.png)
 
 Output :
 
-![alt text](image-6.png)
+![alt text](assets/ass/image-6.png)
 
