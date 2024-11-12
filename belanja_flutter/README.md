@@ -1,10 +1,3 @@
-# **Pemrograman Mobile - Pertemuan 6**
-### NO : 20
-### NIM : 2241720226
-### NAMA : Raffi Ilham Maulana
-
-<br>
-
 ## **9. Praktikum 5: Membangun Navigasi di Flutter**
 
 ### **Langkah 1: Siapkan project baru**
